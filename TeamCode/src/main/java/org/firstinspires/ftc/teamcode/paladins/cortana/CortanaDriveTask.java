@@ -32,10 +32,10 @@ public class CortanaDriveTask extends BaseTask implements Task {
 
     @Override
     public void run() {
-        drive.setPower(frontLeftSpeed, frontRightSpeed, backLeftSpeed, backRightSpeed);
+        drive.setPower(frontLeftSpeed, frontRightSpeed);
         drive.update();
         if (isFinished()) {
-            drive.setPower(0, 0, 0,0);
+            drive.setPower(0, 0);
             drive.update();
             return;
         }

@@ -37,11 +37,9 @@ public class CortanaDrive extends PaladinsComponent {
         backRightPower = 0;
     }
 
-    public void setPower(double frontLeft, double frontRight, double backLeft, double backRight) {
+    public void setPower(double frontLeft, double frontRight) {
         frontRightPower = -frontRight;
         frontLeftPower = -frontLeft;
-        backRightPower = -backRight;
-        backLeftPower = -backLeft;
     }
 
     public void setToBrake() {
