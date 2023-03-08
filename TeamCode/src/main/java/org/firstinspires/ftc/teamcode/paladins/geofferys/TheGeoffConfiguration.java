@@ -21,9 +21,8 @@ public class TheGeoffConfiguration extends RobotConfiguration {
     // motors
     public DcMotor LeftMotor;
     public DcMotor RightMotor;
-
     // Lift Motor
-    public DcMotor liftMotor;
+    public DcMotor LiftMotor;
 
     BNO055IMU imu;
 
@@ -40,6 +39,7 @@ public class TheGeoffConfiguration extends RobotConfiguration {
      * @param telemetry
      * @return
      */
+
     public static TheGeoffConfiguration newConfig(HardwareMap hardwareMap, Telemetry telemetry) {
         TheGeoffConfiguration config = new TheGeoffConfiguration();
         config.init(hardwareMap, telemetry);
@@ -60,7 +60,7 @@ public class TheGeoffConfiguration extends RobotConfiguration {
         LeftMotor = (DcMotor) getHardwareOn("LeftMotor", hardwareMap.dcMotor);
         RightMotor = (DcMotor) getHardwareOn("RightMotor", hardwareMap.dcMotor);
 
-        liftMotor = (DcMotor) getHardwareOn("liftMotor", hardwareMap.dcMotor);
+        LiftMotor = (DcMotor) getHardwareOn("liftMotor", hardwareMap.dcMotor);
 
 
         //LeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
